@@ -19,7 +19,7 @@ setup(
     #long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/jegesh/Timer',
+    url='https://github.com/carvetighter/Timer',
 
     # Author details
     author='Brent Allen',
