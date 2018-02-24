@@ -1,3 +1,4 @@
+setup.cfg
 setup.py
 Timer.egg-info/PKG-INFO
 Timer.egg-info/SOURCES.txt

@@ -1,0 +1,6 @@
+setup.cfg
+setup.py
+TimerWrapper.egg-info/PKG-INFO
+TimerWrapper.egg-info/SOURCES.txt
+TimerWrapper.egg-info/dependency_links.txt
+TimerWrapper.egg-info/top_level.txt
