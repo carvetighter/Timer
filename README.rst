@@ -12,8 +12,6 @@ Installation
 Usage
 =====
 
-| **Time a block of code.**
-|
 | **Example 01:**
 
 ::
