@@ -22,9 +22,7 @@ Usage
     <block of code>
     timer_00.stop()
 
-| **Example 01 Output**:
-|
-| for 5 seconds
+| **Example 01 Output (5 seconds)**:
 ::
 
     <code output>
