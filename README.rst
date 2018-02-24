@@ -1,64 +1,61 @@
-Random Access File Reader
+TimerWrapper
 -------------------------
 
-| This is a small library that allows for reading any given line in a file without having to read all the lines before it
-  or load the entire file into memory.  Only the line indexes and lengths are held in memory, which enables random
-  access even on very large files for a very minuscule memory cost.
+| This is a very small package and is designed to time different parts of code that take more than
+| a second.  This package is not intended to replace ``timeit`` or any other timer.  This is intended 
+| for developers to make debugging a bit easier.
 
 Installation
 ============
-``pip install random-access-file-reader``
+``pip install TimerWrapper``
 
 Usage
 =====
 
-| Usage is very straightforward, and standard csv line endings (newline character), value delimiter (comma), and
-  quotation character (double quote) are the defaults.  These can be changed in the constructor.
+| **Time a block of code.**
 |
-| The ``get_line()`` and ``get_line_dicts()`` methods return a list of rows.
-|
-| **Plain text file example:**
+| **Example 01:**
 
 ::
 
-    from randomAccessReader import RandomAccessReader
+    from TimerWrapper import Timer
 
-    reader = RandomAccessReader('~/myfile.txt')
+    timer_00 = Timer()
+    <block of code>
+    timer_00.stop()
 
-    # single line
-    line = reader.get_lines(2)[0]
-    print line
-
-    # multiple lines
-    lines = reader.get_lines(3, 3)
-    for l in lines:
-        print l
-
-| Optional arguments in the constructor:
-
-- ``endline_character`` - self-explanatory (default is endline character ``\n``)
-- ``ignore_blank_lines`` - if set to ``True``, blank lines in the file will not be read or indexed (default is ``False``)
-
+| **Example 01 Output**:
 |
-| **Csv example:**
+| for 5 seconds
+::
+
+    <code output>
+    process time is: 00:00:05
+
+| 
+| The stop_timer() method has a variable where you can add a string.
+| 
+| **Example 02:**
+| 
 
 ::
 
-    from randomAccessReader import CsvRandomAccessReader
-    reader = CsvRandomAccessReader('~/myfile.csv')
+    from TimerWrapper import Timer
+    
+    timer_01 = Timer('added text')
+    <block of code>
+    timer_01.stop_timer()
 
-    # single line
-    line = reader.get_line_dicts(5)[0]
-    for x in line:
-        print x + " = " line[x]
+| **Example 02 Output:**
+| 
+| | for 5 seconds with text
+|
+::
 
-    # multiple lines
-    lines = reader.get_line_dicts(6, 6)
-    for l in lines:
-        for x in l:
-            print x + " = " l[x]
+    <code output>
+    process time is: 00:00:05 added text
 
-| Optional arguments in the constructor:
+| Properties of class:
 
 - ``endline_character`` - self-explanatory (default is endline character ``\n``)
 - ``ignore_blank_lines`` - if set to ``True``, blank lines in the file will not be read or indexed (default is ``True``)
