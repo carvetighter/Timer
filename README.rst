@@ -42,10 +42,7 @@ Usage
     <block of code>
     timer_01.stop_timer()
 
-| **Example 02 Output:**
-| 
-| | for 5 seconds with text
-|
+| **Example 02 Output (5 seconds):**
 ::
 
     <code output>
