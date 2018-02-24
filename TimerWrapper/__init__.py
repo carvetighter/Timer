@@ -18,7 +18,7 @@ from datetime import timedelta
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$#
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$#    
 
-class TimerWrapper(object):
+class Timer(object):
     '''
     This class makes is designed to time different methods as wells as tracking progress and time in
     the development process.
