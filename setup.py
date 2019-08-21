@@ -1,4 +1,9 @@
-from setuptools import setup, find_packages
+'''
+this is the set-up file for the package
+'''
+
+from setuptools import setup
+from setuptools import find_packages
 
 setup(
     name='TimerWrapper',

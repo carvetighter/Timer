@@ -29,6 +29,7 @@ class Timer(object):
         datetime_start
         datetime_stop
         timedelta_time_diff
+        float_seconds
         string_start_time
         string_stop_time
         string_time_diff
