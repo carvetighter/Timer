@@ -1,5 +1,4 @@
-README.rst
-setup.cfg
+README.md
 setup.py
 TimerWrapper.egg-info/PKG-INFO
 TimerWrapper.egg-info/SOURCES.txt

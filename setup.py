@@ -3,7 +3,10 @@ this is the set-up file for the package
 '''
 
 from setuptools import setup
-from setuptools import find_packages
+#from setuptools import find_packages
+
+with open('README.md', 'r') as fh:
+    long_descreption = fh.read()
 
 setup(
     name='TimerWrapper',
@@ -11,8 +14,9 @@ setup(
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    version='0.3',
+    version='0.4',
     description='Timer for long time periods',
+    long_descreption = long_descreption,
 
     # The project's main homepage.
     url='https://github.com/carvetighter/Timer',
